@@ -1,7 +1,14 @@
+#include <time.h>
 #include "AppDelegate.h"
-#include "HelloWorldScene.h"
+#include "MainScene.h"
+#include "GameScene.h"
 
 USING_NS_CC;
+static cocos2d::Size screenResolutionSize = cocos2d::Size(1920, 1080);
+static cocos2d::Size designResolutionSize = cocos2d::Size(480, 270);
+static cocos2d::Size smallResolutionSize = cocos2d::Size(480, 320);
+static cocos2d::Size mediumResolutionSize = cocos2d::Size(1024, 768);
+static cocos2d::Size largeResolutionSize = cocos2d::Size(2048, 1536);
 
 AppDelegate::AppDelegate() {
 
@@ -23,26 +30,36 @@ void AppDelegate::initGLContextAttrs()
 }
 
 bool AppDelegate::applicationDidFinishLaunching() {
+	srand(time(NULL));
     // initialize director
     auto director = Director::getInstance();
     auto glview = director->getOpenGLView();
-    if(!glview) {
-        glview = GLViewImpl::createWithRect("SceneLighting", Rect(0, 0, 960, 640));
-        director->setOpenGLView(glview);
-    }
 
-    director->getOpenGLView()->setDesignResolutionSize(960, 640, ResolutionPolicy::SHOW_ALL);
+	if (!glview) {
+#if (CC_TARGET_PLATFORM == CC_PLATFORM_WIN32) || (CC_TARGET_PLATFORM == CC_PLATFORM_MAC) || (CC_TARGET_PLATFORM == CC_PLATFORM_LINUX)
+		glview = GLViewImpl::createWithRect("SceneLighting", Rect(0, 0, screenResolutionSize.width, screenResolutionSize.height), 0.5f);
+#else
+		glview = GLViewImpl::create("SceneLighting");
+#endif
+		director->setOpenGLView(glview);
+	}
+
+
+	director->getOpenGLView()->setDesignResolutionSize(1280, 720, ResolutionPolicy::SHOW_ALL);
 
     // turn on display FPS
     director->setDisplayStats(true);
 
     // set FPS. the default value is 1.0/60 if you don't call this
-    director->setAnimationInterval(1.0 / 60);
+    director->setAnimationInterval(1.0f / 60.0f);
 
     FileUtils::getInstance()->addSearchPath("res");
+	FileUtils::getInstance()->addSearchPath("gamescene");
+	FileUtils::getInstance()->addSearchPath("mainscene");
 
     // create a scene. it's an autorelease object
-    auto scene = HelloWorld::createScene();
+    auto scene = MainScene::createScene();
+//	auto scene = GameScene::createScene();
 
     // run
     director->runWithScene(scene);

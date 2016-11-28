@@ -3,8 +3,46 @@
   <SolutionFolder>
     <Group ctype="ResourceGroup">
       <RootFolder Name=".">
-        <Image Name="HelloWorld.png" />
+        <PlistImageFolder Image="boyrunning.png" PListFile="boyrunning.plist" Name=".boyrunning_PList.Dir">
+          <PlistImageFile Name="boy_run_01.png" Key="boy_run_01.png" />
+          <PlistImageFile Name="boy_run_02.png" Key="boy_run_02.png" />
+          <PlistImageFile Name="boy_run_03.png" Key="boy_run_03.png" />
+          <PlistImageFile Name="boy_run_04.png" Key="boy_run_04.png" />
+          <PlistImageFile Name="boy_run_05.png" Key="boy_run_05.png" />
+          <PlistImageFile Name="boy_run_06.png" Key="boy_run_06.png" />
+          <PlistImageFile Name="boy_run_07.png" Key="boy_run_07.png" />
+          <PlistImageFile Name="boy_run_08.png" Key="boy_run_08.png" />
+          <PlistImageFile Name="boy_run_09.png" Key="boy_run_09.png" />
+          <PlistImageFile Name="boy_run_10.png" Key="boy_run_10.png" />
+          <PlistImageFile Name="boy_run_11.png" Key="boy_run_11.png" />
+        </PlistImageFolder>
+        <PlistImageFolder Image="gamescene.png" PListFile="gamescene.plist" Name=".gamescene_PList.Dir">
+          <PlistImageFile Name="backgroundg.png" Key="backgroundg.png" />
+          <PlistImageFile Name="lightbulb.png" Key="lightbulb.png" />
+          <PlistImageFile Name="returnnormal.png" Key="returnnormal.png" />
+          <PlistImageFile Name="returnon.png" Key="returnon.png" />
+          <PlistImageFile Name="roadfg.png" Key="roadfg.png" />
+          <PlistImageFile Name="stone1.png" Key="stone1.png" />
+          <PlistImageFile Name="stone2.png" Key="stone2.png" />
+          <PlistImageFile Name="stone3.png" Key="stone3.png" />
+          <PlistImageFile Name="tree1.png" Key="tree1.png" />
+          <PlistImageFile Name="tree2.png" Key="tree2.png" />
+          <PlistImageFile Name="tree3.png" Key="tree3.png" />
+          <PlistImageFile Name="wood1.png" Key="wood1.png" />
+        </PlistImageFolder>
+        <PlistImageFolder Image="mainscene.png" PListFile="mainscene.plist" Name=".mainscene_PList.Dir">
+          <PlistImageFile Name="background.png" Key="background.png" />
+          <PlistImageFile Name="startnormal.png" Key="startnormal.png" />
+          <PlistImageFile Name="starton.png" Key="starton.png" />
+        </PlistImageFolder>
+        <Image Name="background.png" />
+        <File Name="boyanim.plist" />
+        <Project Name="fgnode.csd" Type="Node" />
+        <Project Name="GameScene.csd" Type="Scene" />
+        <File Name="gamescene.tps" />
         <Project Name="MainScene.csd" Type="Scene" />
+        <Project Name="stonenode.csd" Type="Node" />
+        <Project Name="treenode.csd" Type="Node" />
       </RootFolder>
     </Group>
   </SolutionFolder>
