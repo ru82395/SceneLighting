@@ -10,6 +10,12 @@
     <Filter Include="src">
       <UniqueIdentifier>{bb6c862e-70e9-49d9-81b7-3829a6f50471}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\Common">
+      <UniqueIdentifier>{59d3376f-a811-4100-acb8-561447eacb8e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\EffectSprite">
+      <UniqueIdentifier>{09e3e09e-571c-45bb-b6b0-5c84ecbe87f7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -18,7 +24,25 @@
     <ClCompile Include="..\Classes\AppDelegate.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="..\Classes\HelloWorldScene.cpp">
+    <ClCompile Include="..\Classes\Common\CButton.cpp">
+      <Filter>src\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Common\CFGObject.cpp">
+      <Filter>src\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\EffectSprite\Effect.cpp">
+      <Filter>src\EffectSprite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\EffectSprite\EffectSprite.cpp">
+      <Filter>src\EffectSprite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\EffectSprite\LightEffect.cpp">
+      <Filter>src\EffectSprite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\gamescene.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\MainScene.cpp">
       <Filter>src</Filter>
     </ClCompile>
   </ItemGroup>
@@ -29,7 +53,28 @@
     <ClInclude Include="..\Classes\AppDelegate.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="..\Classes\HelloWorldScene.h">
+    <ClInclude Include="..\Classes\Common\CButton.h">
+      <Filter>src\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Common\CFGObject.h">
+      <Filter>src\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Common\const.h">
+      <Filter>src\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\EffectSprite\Effect.h">
+      <Filter>src\EffectSprite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\EffectSprite\EffectSprite.h">
+      <Filter>src\EffectSprite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\EffectSprite\LightEffect.h">
+      <Filter>src\EffectSprite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\gamescene.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\MainScene.h">
       <Filter>src</Filter>
     </ClInclude>
   </ItemGroup>

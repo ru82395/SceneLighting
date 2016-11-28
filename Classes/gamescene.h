@@ -11,7 +11,7 @@
 #include "Common/CFGObject.h"
 #include "Common/const.h"
 
-#define MULTI_TOUCH 1
+//#define MULTI_TOUCH 1
 //#define LIGHTING 1
 
 class GameScene : public cocos2d::Layer
